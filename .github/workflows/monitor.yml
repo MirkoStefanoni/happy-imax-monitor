@@ -1,21 +1,12 @@
 name: Avengers IMAX Afragola
 
 on:
-  schedule:
-    - cron: '3 * * * *'
   workflow_dispatch:
     inputs:
       test_notification:
         description: 'Invia un solo avviso di prova tramite GitHub'
         type: boolean
         default: false
-  push:
-    branches: [main]
-    paths:
-      - monitor.py
-      - test_monitor.py
-      - requirements.txt
-      - .github/workflows/monitor.yml
 
 permissions:
   contents: read
